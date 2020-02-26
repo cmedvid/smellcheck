@@ -5,8 +5,12 @@ import serial
 port = '/dev/cu.usbserial-1410'
 ard = serial.Serial(port,9600,timeout=5)
 
+if not sys.warnoptions:
+    import warnings
+    warnings.simplefilter("ignore")
+
 dict = PyDictionary()
-print("Welcome! Type a word, check your spelling, and ignore the initial warning message! :)")
+print("Welcome! Type a word and check your spelling! :)")
 for line in sys.stdin:
     input = line
     if dict.meaning(input):
