@@ -10,11 +10,12 @@ if not sys.warnoptions:
     warnings.simplefilter("ignore")
 
 dict = PyDictionary()
+
 print("Welcome! Type a word and check your spelling! :)")
 for line in sys.stdin:
     input = line
     if dict.meaning(input):
-        pass
+        print("Your spelling is correct! Go again!")
     else:
         print("Incorrect spelling! Please try again.")
         scent = 1
