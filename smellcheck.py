@@ -12,7 +12,7 @@ for line in sys.stdin:
     if dict.meaning(input):
         pass
     else:
-        print("Wrong, you fool")
+        print("Incorrect spelling! Please try again.")
         scent = 1
         str(scent)
         ard.write(scent)
